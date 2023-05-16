@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,7 +10,25 @@
 
     <title>jefferson gonçalves!</title>
   </head>
+
   <body>
+      <nav style="background-color: rgb(218, 196, 90) !important;" class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Cadastro de Usuarios!</span>
+        </div>
+      </nav>
+      <form action="{% url 'listagem_usuarios' %}" method="post">
+      {% csrf_token %} 
+        <div style="text-align: center;" class="container">
+            <h1>Cadastro</h1>
+            Nome <input  name="nome" class="from-control-sm" type="text">
+            Idade <input name="idade" class="from-control-sm" type="text">
+            <button class="from-control-sm">Enviar</button>
+        </div>
+      </form>
+
+ 
+
     <h1></h1>
 
     <!-- Optional JavaScript; choose one of the two! -->
